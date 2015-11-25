@@ -1,9 +1,10 @@
 # cbrSelector
-Matlab cbrSelector Color Maps (with viewer and selection help).
+Matlab Color Maps (with viewer and selection help).
 
 # Credit
-Colors from www.cbrSelector.org by Cynthia A. Brewer, Geography, Pennsylvania State University
+Colors from www.colorbrewer.org by Cynthia A. Brewer, Geography, Pennsylvania State University
 This product includes color specifications and designs developed by Cynthia Brewer (http://colorbrewer.org/)
+
 The create portion of this requires hex2rgb by Jos (http://www.mathworks.com/matlabcentral/fileexchange/45727-hex2rgb)
 which is only required if you need to recreate the cbr.mat file.
 
