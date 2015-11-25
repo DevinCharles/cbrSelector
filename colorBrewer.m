@@ -1,5 +1,27 @@
-function varargout = color_brewer(varargin)
-%
+function varargout = colorBrewer(varargin)
+% #colorBrewer
+% Matlab ColorBrewer Color Maps (with viewer and selection help).
+% 
+% # Palette Decision Making 
+% colorBrewer() - Shows all available color arrays and thier names
+% 
+% colorBrewer('type','diverging') - Shows all diverging color arrays and their names (also 'type','d')
+% colorBrewer('type',qualitative) - Shows all qualitative color arrays and their names (also 'type','q')
+% colorBrewer('type',sequential)  - Shows all sequential color arrays and their names (also, 'type','s')
+% 
+% colorBrewer('length','twelve') - Shows all color arrays that have 12 colors (also 'length',12 or any number 3-12)
+% 
+% # Color Map Selection
+% Once you know what you want use the 'name' key value pair
+% 
+% cmap = colorBrewer('name','BrBg') - Returns the BrBg color array as an 8x3 colormap
+% cmap = colorBrewer('name','Paired','length',12) - Returns the Paire color array as a 12x3 colormap
+% 
+% # Setting Current Color Map
+% You can now use colormap(cmap) to set the current color map to your new ColorBrewer map
+% 
+% # Turning Plotting Off
+% cmap = colorBrewer('name','Paired','length',12,'plot',false) or 'plot','f' or 'plot','false'
 %
 %     Copyright (C) 2015  Devin C Prescott
 % 
@@ -28,17 +50,23 @@ function varargout = color_brewer(varargin)
 
     % Set Defaults
     ind = true(length(CBR),1);
-    len = 'eight';
+    len = 'default';
+    type = 'default';
+    name = 'default';
     plot_bool = false;
 
     nums = {'one','two','three','four','five','six','seven','eight','nine',...
             'ten','eleven','twelve'};
 
     if isempty(varargin) || any(strcmpi(varargin{1},{'help','-h','-?'}))
-        disp('Options include:')
-        disp('  Show Names of Color Arrays by Type');
+        disp('Name-Value Pairs:')
         disp('    type: diverging,qualitative,sequential')
-        plot_cbr(ind,len,CBR)
+        disp('    length: one,two,three,...twelve')
+        disp('    name: YlGn,YlGnBu,GnBu,...Blues,Greens,...Accent...')
+        disp('    plot: true,false')
+        disp('')
+        
+        plot_cbr(ind,'eight',CBR)
         varargout{1} = [];
         return
     end
@@ -61,6 +89,8 @@ function varargout = color_brewer(varargin)
                     plot_bool = value;
                 elseif strcmpi(value,{'true','t'})
                     plot_bool = true;
+                elseif strcmpi(value,{'false','f'})
+                    plot_bool = false;
                 else
                     disp ('Did you mean ''plot'',true ?')
                     plot_bool = false;
@@ -71,6 +101,10 @@ function varargout = color_brewer(varargin)
                     len = nums{value};
                 else
                     len = value;
+                end
+                
+                if any(strcmpi(len,{'one','two'}))
+                    len = 'three';
                 end
                 
             case 'name'
@@ -94,13 +128,22 @@ function varargout = color_brewer(varargin)
         end
     end
     
+    if strcmpi(len,'default')
+        len = 'eight';
+        plot_bool = true;
+    end
+    
+    if strcmpi(type,'default')
+        plot_bool = true;
+    end
+    
     % Restructure with only those that have requested length
     ind2 = logical(cell2mat(cellfun(@isempty,{CBR.(len)},...
     'UniformOutput',false)))';
     ind = ind&~ind2;
     
     if plot_bool
-        plot_cbr(ind,len,type,CBR);
+        plot_cbr(ind,len,CBR);
     end
     
     try 
@@ -143,7 +186,7 @@ function CBR = create_cbr()
         save('cbr.mat','CBR')
 end
 
-function plot_cbr(ind,len,type,CBR)    
+function plot_cbr(ind,len,CBR)    
     [m,n] = size([CBR(ind).(len)]);
     n = n/3;
     if n < 1 || m < 1
