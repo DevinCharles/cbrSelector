@@ -1,6 +1,6 @@
 function varargout = cbrSelector(varargin)
 % % Matlab Color Maps (with viewer and selection help) using
-% colors from www.cbrSelector.org by Cynthia A. Brewer, Geography, Pennsylvania State University
+% colors from www.colorbrewer.org by Cynthia A. Brewer, Geography, Pennsylvania State University
 %
 % # Palette Decision Making 
 % cbrSelector() - Shows all available color arrays and thier names
