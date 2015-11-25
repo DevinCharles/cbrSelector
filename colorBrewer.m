@@ -22,6 +22,13 @@ function varargout = colorBrewer(varargin)
 % 
 % # Turning Plotting Off
 % cmap = colorBrewer('name','Paired','length',12,'plot',false) or 'plot','f' or 'plot','false'
+% 
+% # Creating the Maps from Scratch
+% If you're leery of the cbr.mat file that contains the color maps and want to create them this file on your own. First delete the cbr.mat file then use the command:
+% 
+% colorBrewer('create')
+% 
+% This will recreate the cbr.mat file from the text in the file cbr_cell.m. Additionally, you can use this to add extra color pallets. 
 %
 %     Copyright (C) 2015  Devin C Prescott
 % 
@@ -52,7 +59,6 @@ function varargout = colorBrewer(varargin)
     ind = true(length(CBR),1);
     len = 'default';
     type = 'default';
-    name = 'default';
     plot_bool = false;
 
     nums = {'one','two','three','four','five','six','seven','eight','nine',...
