@@ -21,3 +21,10 @@ You can now use colormap(cmap) to set the current color map to your new ColorBre
 
 # Turning Plotting Off
 cmap = colorBrewer('name','Paired','length',12,'plot',false) or 'plot','f' or 'plot','false'
+
+# Creating the Maps from Scratch
+If you're leery of the cbr.mat file that contains the color maps and want to create them this file on your own. First delete the cbr.mat file then use the command:
+
+colorBrewer('create')
+
+This will recreate the cbr.mat file from the text in the file cbr_cell.m. Additionally, you can use this to add extra color pallets. 
