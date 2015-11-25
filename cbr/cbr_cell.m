@@ -1,3 +1,17 @@
+% Apache-Style Software License for ColorBrewer software and ColorBrewer Color Schemes
+
+% Copyright (c) 2002 Cynthia Brewer, Mark Harrower, and The Pennsylvania State University.
+
+% Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. 
+% You may obtain a copy of the License at 
+
+% http://www.apache.org/licenses/LICENSE-2.0 
+
+% Unless required by applicable law or agreed to in writing, software distributed 
+% under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+% CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+% specific language governing permissions and limitations under the License.
+
 cbr = {{'name','YlGn',3,['f7fcb9';'addd8e';'31a354'],4,['ffffcc';'c2e699';'78c679';'238443'],5,['ffffcc';'c2e699';'78c679';'31a354';'006837'],6,['ffffcc';'d9f0a3';'addd8e';'78c679';'31a354';'006837'],7,['ffffcc';'d9f0a3';'addd8e';'78c679';'41ab5d';'238443';'005a32'],8,['ffffe5';'f7fcb9';'d9f0a3';'addd8e';'78c679';'41ab5d';'238443';'005a32'],9,['ffffe5';'f7fcb9';'d9f0a3';'addd8e';'78c679';'41ab5d';'238443';'006837';'004529']},...
 {'name','YlGnBu',3,['edf8b1';'7fcdbb';'2c7fb8'],4,['ffffcc';'a1dab4';'41b6c4';'225ea8'],5,['ffffcc';'a1dab4';'41b6c4';'2c7fb8';'253494'],6,['ffffcc';'c7e9b4';'7fcdbb';'41b6c4';'2c7fb8';'253494'],7,['ffffcc';'c7e9b4';'7fcdbb';'41b6c4';'1d91c0';'225ea8';'0c2c84'],8,['ffffd9';'edf8b1';'c7e9b4';'7fcdbb';'41b6c4';'1d91c0';'225ea8';'0c2c84'],9,['ffffd9';'edf8b1';'c7e9b4';'7fcdbb';'41b6c4';'1d91c0';'225ea8';'253494';'081d58']},...
 {'name','GnBu',3,['e0f3db';'a8ddb5';'43a2ca'],4,['f0f9e8';'bae4bc';'7bccc4';'2b8cbe'],5,['f0f9e8';'bae4bc';'7bccc4';'43a2ca';'0868ac'],6,['f0f9e8';'ccebc5';'a8ddb5';'7bccc4';'43a2ca';'0868ac'],7,['f0f9e8';'ccebc5';'a8ddb5';'7bccc4';'4eb3d3';'2b8cbe';'08589e'],8,['f7fcf0';'e0f3db';'ccebc5';'a8ddb5';'7bccc4';'4eb3d3';'2b8cbe';'08589e'],9,['f7fcf0';'e0f3db';'ccebc5';'a8ddb5';'7bccc4';'4eb3d3';'2b8cbe';'0868ac';'084081']},...
