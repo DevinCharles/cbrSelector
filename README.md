@@ -35,12 +35,5 @@ cbrSelector('create')
 
 This will recreate the cbr.mat file from the text in the file cbr_cell.m. Additionally, you can use this to add extra color pallets.
 
-# Other Licensey Stuff
-## Per the ColorBrewer Website
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
-1. Redistributions as source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
-2. The end-user documentation included with the redistribution, if any, must include the following acknowledgment: 
-"This product includes color specifications and designs developed by Cynthia Brewer (http://colorbrewer.org/)." 
-Alternately, this acknowledgment may appear in the software itself, if and wherever such third-party acknowledgments normally appear. 
-4. The name "ColorBrewer" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact Cynthia Brewer at cbrewer@psu.edu. 
-5. Products derived from this software may not be called "ColorBrewer", nor may "ColorBrewer" appear in their name, without prior written permission of Cynthia Brewer.
+# License
+The source code created and copyrighted by me is licensed under GPL. Colors and schemes are licensed under the Apache 2 license contained in the cbr folder and are copyrighted by Cynthia A. Brewer.
